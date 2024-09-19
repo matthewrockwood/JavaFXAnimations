@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="504.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mazeproject.HelloController">
+  <tabs>
+    <Tab text="Robot And Maze1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="308.0" prefWidth="508.0">
+               <children>
+                  <ImageView fitHeight="363.0" fitWidth="504.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@maze.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="robot1" layoutX="2.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@robot.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="RobotAnimation" layoutX="1.0" layoutY="346.0" mnemonicParsing="false" onAction="#setRobotAnimation" text="Animation" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Car and Maze 2">
+      <content>
+        <AnchorPane fx:id="maze2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="376.0" fitWidth="504.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@maze2.png" />
+                     </image>
+                  </ImageView>
+
+                  <ImageView fx:id="carImage" fitHeight="31.0" fitWidth="72.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@car.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="animation2" layoutX="1.0" layoutY="352.0" mnemonicParsing="false" onAction="#carAnimation" text="Animation" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="302.0" layoutX="82.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="79.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
