@@ -8,8 +8,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.PixelReader;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -21,6 +24,7 @@ public class HelloController implements Initializable {
     public ImageView carImage;
     @FXML
     public Button animation2;
+    public ImageView BigMaze1;
     @FXML
     private Button RobotAnimation;
     @FXML
@@ -120,6 +124,7 @@ public class HelloController implements Initializable {
 
     }
     public void moveCarRight() {
+
         carImage.setX(carImage.getX() + 5);
         carImage.setRotate(0);
     }
@@ -138,8 +143,11 @@ public class HelloController implements Initializable {
         carImage.setY(carImage.getY() + 5);
         carImage.setRotate(90);
     }
+
     public void moveRobotRight(){
-        robot1.setX(robot1.getX()+5);
+
+            robot1.setX(robot1.getX() + 5);
+
     }
     public void moveRobotLeft(){
         robot1.setX(robot1.getX()-5);
@@ -168,5 +176,21 @@ public class HelloController implements Initializable {
 
         }
         sequentialTransition2.play();
+    }
+    public boolean isRobotTouchingWhite() {
+        int width = (int) robot1.getImage().getWidth();
+        int height = (int) robot1.getImage().getHeight();
+        PixelReader pixelReader = robot1.getImage().getPixelReader();
+
+
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                Color color = pixelReader.getColor(x, y);
+                if (color.getRed() > 0.9 && color.getGreen() > 0.9 && color.getBlue() > 0.9) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

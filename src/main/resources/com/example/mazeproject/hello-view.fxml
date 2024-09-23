@@ -14,12 +14,12 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="308.0" prefWidth="508.0">
                <children>
-                  <ImageView fitHeight="363.0" fitWidth="504.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="BigMaze1" fitHeight="363.0" fitWidth="504.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@maze.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="robot1" layoutX="2.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="robot1" fitHeight="18.0" fitWidth="16.0" layoutX="6.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@robot.png" />
                      </image>
